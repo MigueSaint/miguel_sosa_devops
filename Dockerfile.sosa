@@ -1,0 +1,14 @@
+# Imagen base de Python
+FROM python:3.10-slim
+
+# Crear carpeta de trabajo
+WORKDIR /app
+
+# Copiar archivos
+COPY . .
+
+# Instalar dependencias
+RUN pip install -r requirements.txt
+
+# Comando de ejecución
+CMD ["python", "app.py"]
